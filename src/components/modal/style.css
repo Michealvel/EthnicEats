@@ -1,0 +1,162 @@
+.modal {
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgb(255, 255, 255, 0.4);
+  filter: blur(1.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#inner {
+  display: flex;
+  width: 620px;
+}
+
+#add_book {
+  width: 100%;
+  height: 100%;
+  border-radius: var(--border-radius);
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.modal_header {
+  width: 100%;
+  height: min-content;
+  max-height: 62px;
+  text-overflow: ellipsis;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.3rem;
+}
+
+.modal_header h2 {
+  margin: auto;
+  text-align: center;
+  text-transform: capitalize;
+}
+
+hr {
+  width: 95%;
+}
+
+.times {
+  position: absolute;
+  right: 4px;
+  top: 0;
+  font-size: 1.2rem;
+  cursor: pointer;
+  display: inline;
+}
+
+.modal_div {
+  width: 100%;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 1rem;
+}
+
+#inner input {
+  margin-top: 0.2rem;
+}
+
+ul {
+  list-style: none;
+}
+
+#description {
+  outline: none;
+  border: none;
+  border-radius: var(--border-radius);
+  padding: var(--border-radius);
+}
+
+#description::-webkit-scrollbar {
+  background-color: transparent;
+  width: 0.5rem;
+}
+
+#description::-webkit-scrollbar-thumb {
+  background-color: var(--blue);
+  cursor: pointer;
+}
+
+.split {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.modal_div span {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: var(--blue);
+}
+
+.modal_div span:hover {
+  transform: scale(1.2);
+  transition-duration: 0.3s;
+}
+
+.icons {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  padding: 1rem;
+}
+
+#add_button {
+  padding-top: 0.5rem;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+@media screen and (max-width: 620px) {
+  .split {
+    flex-direction: column;
+  }
+
+  .modal_div {
+    width: 100%;
+  }
+
+  input {
+    min-width: 40%;
+  }
+
+  #inner {
+    max-height: 100vh;
+    overflow-y: scroll;
+  }
+
+  #inner::-webkit-scrollbar {
+    opacity: 0;
+    display: none;
+  }
+}
